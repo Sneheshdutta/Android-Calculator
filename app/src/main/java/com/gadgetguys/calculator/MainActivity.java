@@ -6,15 +6,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,btnDot;
     Button btnAdd,btnSub,btnMul,btnDiv,btnEqual;
     Button btnClear;
     EditText ed1,ed2,ed3;
-    int x=0;
+    int x;
     float Res1,Res2;
-    boolean Add,Sub,Mul,Div;
+    boolean Add,Sub,Mul,Div,copy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,8 @@ public class MainActivity extends AppCompatActivity {
         ed1=(EditText)findViewById(R.id.ed1);
         ed2=(EditText)findViewById(R.id.ed2);
         ed3=(EditText)findViewById(R.id.ed3);
-        ed1.setText(null);
+        x=Integer.parseInt("0");
+        ed1.setText(x+"");
         ed2.setText(null);
         ed3.setText(null);
 
@@ -115,56 +117,93 @@ public class MainActivity extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ed1==null){
-                    ed1.setText(null);
+
+                if(ed1.length()==0){
+                    ed1.setText(x+"");
                 }
                 else{
-                    Res1=Float.parseFloat(ed1.getText()+"");
-                    Add=true;
-                    ed3.setText(ed1.getText()+"+");
-                    ed1.setText(null);
+                    if(copy==true){
+                        ed3.setText(ed2.getText()+"+");
+                        Res1=Float.parseFloat(ed2.getText()+"");
+                        ed1.setText(x+"");
+                        Add=true;
+                        copy=false;
+                    }
+                    else {
+                        Res1 = Float.parseFloat(ed1.getText() + "");
+                        Add = true;
+                        ed3.setText(ed1.getText() + "+");
+                        ed1.setText(x+"");
+                    }
                 }
             }
         });
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ed1==null){
-                    ed1.setText(null);
+                if(ed1.length()==0){
+                    ed1.setText(x+"");;
                 }
                 else{
-                    Res1=Float.parseFloat(ed1.getText()+"");
-                    Sub=true;
-                    ed3.setText(ed1.getText()+"-");
-                    ed1.setText(null);
+                    if(copy==true){
+                        ed3.setText(ed2.getText()+"-");
+                        Res1=Float.parseFloat(ed2.getText()+"");
+                        ed1.setText(x+"");
+                        Sub=true;
+                        copy=false;
+                    }
+                    else {
+                        Res1 = Float.parseFloat(ed1.getText() + "");
+                        Sub = true;
+                        ed3.setText(ed1.getText() + "-");
+                        ed1.setText(x+"");
+                    }
                 }
             }
         });
         btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ed1==null){
-                    ed1.setText(null);
+                if(ed1.length()==0){
+                    ed1.setText(x+"");
                 }
                 else{
-                    Res1=Float.parseFloat(ed1.getText()+"");
-                    Mul=true;
-                    ed3.setText(ed1.getText()+"*");
-                    ed1.setText(null);
+                    if(copy==true){
+                        ed3.setText(ed2.getText()+"*");
+                        Res1=Float.parseFloat(ed2.getText()+"");
+                        ed1.setText(x+"");
+                        Mul=true;
+                        copy=false;
+                    }
+                    else {
+                        Res1 = Float.parseFloat(ed1.getText() + "");
+                        Mul = true;
+                        ed3.setText(ed1.getText() + "*");
+                        ed1.setText(x+"");
+                    }
                 }
             }
         });
         btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(ed1==null){
-                    ed1.setText(null);
+                if(ed1.length()==0){
+                    ed1.setText(x+"");
                 }
                 else{
-                    Res1=Float.parseFloat(ed1.getText()+"");
-                    Div=true;
-                    ed3.setText(ed1.getText()+"/");
-                    ed1.setText(null);
+                    if(copy==true){
+                        ed3.setText(ed2.getText()+"/");
+                        Res1=Float.parseFloat(ed2.getText()+"");
+                        ed1.setText(x+"");
+                        Div=true;
+                        copy=false;
+                    }
+                    else {
+                        Res1 = Float.parseFloat(ed1.getText() + "");
+                        Div = true;
+                        ed3.setText(ed1.getText() + "/");
+                        ed1.setText(x+"");
+                    }
                 }
             }
         });
@@ -176,28 +215,32 @@ public class MainActivity extends AppCompatActivity {
                     Res2=Float.parseFloat(ed1.getText()+"");
                     ed2.setText(Res1+Res2+"");
                     Add=false;
+                    copy=true;
                 }
                 if(Sub==true){
                     Res2=Float.parseFloat(ed1.getText()+"");
                     ed2.setText(Res1-Res2+"");
                     Sub=false;
+                    copy=true;
                 }
                 if(Mul==true){
                     Res2=Float.parseFloat(ed1.getText()+"");
                     ed2.setText(Res1*Res2+"");
                     Mul=false;
+                    copy=true;
                 }
                 if(Div==true){
                     Res2=Float.parseFloat(ed1.getText()+"");
                     ed2.setText(Res1/Res2+"");
                     Div=false;
+                    copy=true;
                 }
             }
         });
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ed1.setText(null);
+                ed1.setText(x+"");
                 ed2.setText(null);
                 ed3.setText(null);
             }
