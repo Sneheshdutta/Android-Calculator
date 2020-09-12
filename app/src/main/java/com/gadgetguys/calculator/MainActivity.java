@@ -159,22 +159,27 @@ public class MainActivity extends AppCompatActivity {
         btnEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Res2=Float.parseFloat(ed1.getText()+"");
+                
                 if(Add==true){
+                    Res2=Float.parseFloat(ed1.getText()+"");
                     ed1.setText(Res1+Res2+"");
                     Add=false;
                 }
                 if(Sub==true){
+                    Res2=Float.parseFloat(ed1.getText()+"");
                     ed1.setText(Res1-Res2+"");
                     Sub=false;
-                }if(Mul==true){
+                }
+                if(Mul==true){
+                    Res2=Float.parseFloat(ed1.getText()+"");
                     ed1.setText(Res1*Res2+"");
                     Mul=false;
-                }if(Div==true){
+                }
+                if(Div==true){
+                    Res2=Float.parseFloat(ed1.getText()+"");
                     ed1.setText(Res1/Res2+"");
                     Div=false;
                 }
-
             }
         });
         btnClear.setOnClickListener(new View.OnClickListener() {
