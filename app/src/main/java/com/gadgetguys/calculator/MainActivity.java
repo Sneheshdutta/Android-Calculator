@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,btnDot;
     Button btnAdd,btnSub,btnMul,btnDiv,btnEqual;
     Button btnClear;
-    EditText ed1,ed2;
+    EditText ed1,ed2,ed3;
+    int x=0;
     float Res1,Res2;
     boolean Add,Sub,Mul,Div;
 
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
         btnEqual=(Button)findViewById(R.id.btnEqual);
         ed1=(EditText)findViewById(R.id.ed1);
         ed2=(EditText)findViewById(R.id.ed2);
+        ed3=(EditText)findViewById(R.id.ed3);
+        ed1.setText(null);
+        ed2.setText(null);
+        ed3.setText(null);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,15 +110,18 @@ public class MainActivity extends AppCompatActivity {
                 ed1.setText(ed1.getText()+"0");
             }
         });
+
+
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(ed1==null){
-                    ed1.setText("");
+                    ed1.setText(null);
                 }
                 else{
                     Res1=Float.parseFloat(ed1.getText()+"");
                     Add=true;
+                    ed3.setText(ed1.getText()+"+");
                     ed1.setText(null);
                 }
             }
@@ -122,11 +130,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(ed1==null){
-                    ed1.setText("");
+                    ed1.setText(null);
                 }
                 else{
                     Res1=Float.parseFloat(ed1.getText()+"");
                     Sub=true;
+                    ed3.setText(ed1.getText()+"-");
                     ed1.setText(null);
                 }
             }
@@ -135,11 +144,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(ed1==null){
-                    ed1.setText("");
+                    ed1.setText(null);
                 }
                 else{
                     Res1=Float.parseFloat(ed1.getText()+"");
                     Mul=true;
+                    ed3.setText(ed1.getText()+"*");
                     ed1.setText(null);
                 }
             }
@@ -148,11 +158,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(ed1==null){
-                    ed1.setText("");
+                    ed1.setText(null);
                 }
                 else{
                     Res1=Float.parseFloat(ed1.getText()+"");
                     Div=true;
+                    ed3.setText(ed1.getText()+"/");
                     ed1.setText(null);
                 }
             }
@@ -186,7 +197,9 @@ public class MainActivity extends AppCompatActivity {
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ed1.setText("");
+                ed1.setText(null);
+                ed2.setText(null);
+                ed3.setText(null);
             }
         });
     }

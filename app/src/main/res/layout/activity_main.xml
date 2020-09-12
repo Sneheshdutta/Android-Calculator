@@ -222,25 +222,48 @@
 
     <EditText
         android:id="@+id/ed1"
-        android:layout_width="396dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="7dp"
+        android:layout_width="196dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="2dp"
         android:ems="10"
         android:fontFamily="sans-serif-thin"
         android:gravity="top|left|center_vertical"
         android:inputType="textPersonName"
         android:textAlignment="textEnd"
         android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toEndOf="@+id/ed3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/ed3"
+        android:layout_width="196dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-thin"
+        android:gravity="top|left|center_vertical"
+        android:inputType="textPersonName"
+        android:textAlignment="textStart"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ed1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/ed2"
         android:layout_width="398dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="6dp"
+        android:layout_height="106dp"
+        android:layout_marginTop="79dp"
         android:ems="10"
         android:fontFamily="sans-serif-thin"
         android:gravity="top|left|center_vertical"
@@ -248,7 +271,8 @@
         android:textAlignment="textEnd"
         android:textSize="75sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.461"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ed1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
