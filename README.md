@@ -1,7 +1,7 @@
 # Simple-Calculator
-It is a calculator app, for android. One simple calculator, able to do the simple calculations.
-You can download this apk file by [clicking here](https://github.com/Sneheshdutta/Android-Calculator/blob/master/app/release/app-release.apk)
-Feel free to fork this repository. 
+ It is a calculator app, for android. One simple calculator, able to do the simple calculations.
+ You can download this apk file by [clicking here](https://github.com/Sneheshdutta/Android-Calculator/blob/master/app/release/app-release.apk) &
+ Feel free to fork this repository. 
 
 ### App Preview 
 ---
