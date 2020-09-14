@@ -1,5 +1,6 @@
 <shape android:shape="rectangle"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Adding gradient effect -->
     <gradient
         android:startColor="#6AE60F"
         android:endColor="#2979FF"

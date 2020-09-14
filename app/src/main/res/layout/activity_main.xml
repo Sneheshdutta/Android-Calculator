@@ -7,6 +7,7 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+    <!-- Constrain layput design for Main Activity -->
     <Button
         android:id="@+id/btnEqual"
         android:layout_width="0dp"

@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 public class splashscreen extends AppCompatActivity {
 
+    // declaration
     ImageView img1;
     TextView text1;
     Animation logo,logotext;

@@ -1,5 +1,6 @@
 <shape android:shape="rectangle"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- creating round background -->
     <solid android:color="#FF9F2A"
         />
     <corners android:radius="30dp"/>

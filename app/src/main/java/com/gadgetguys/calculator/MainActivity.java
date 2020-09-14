@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    //declaration of all elements
     Button btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btn0,btnDot;
     Button btnAdd,btnSub,btnMul,btnDiv,btnEqual;
     Button btnClear;
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //typecasting by id
         btn0=(Button)findViewById(R.id.btn0);
         btn1=(Button)findViewById(R.id.btn1);
         btn2=(Button)findViewById(R.id.btn2);
@@ -46,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         ed2.setText(null);
         ed3.setText(null);
 
+        //setting up inputs by onclick listener
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        // operation of add button
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -138,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // operation of Sub button
         btnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // operation of Mul button
         btnMul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -184,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // operation of Div button
         btnDiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -207,6 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // operation of equal button
         btnEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -237,6 +244,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+        // operation of clear or reset button
         btnClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
