@@ -243,6 +243,11 @@ public class MainActivity extends AppCompatActivity {
                 ed1.setText(x+"");
                 ed2.setText(null);
                 ed3.setText(null);
+                copy=false;
+                Add=false;
+                Sub=false;
+                Div=false;
+                Mul=false;
             }
         });
     }
